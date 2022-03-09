@@ -14,6 +14,7 @@ To crate a policy for `Profile` Model as example use the command `php artisan ma
 ## Dealing with Policy
 
 To make sure that only the owner of the profile modifies using policy:
+
 ```php
 // in ProfilePolicy file
 public function update(User $user, Profile $profile){
@@ -22,18 +23,22 @@ public function update(User $user, Profile $profile){
 ```
 
 To use this on controller or in the app:
+
 ```php
 $this->authorize('update',$user->profile); // pass the profile
 ```
 
 To use this on blade using blade diretive `@can`:
+
 ```blade
 @can('update',$user->profile);
 ```
 
 ## Guest Approach (Null User) in Policies
-If you have some method that could accept null user or a guest put `?` before the user model.
+
+If you have some method that could accept null `User` or a guest put `?` before the user model.
 for example:
+
 ```php
 public function view(?User $user, Profile $profile){
     // do some stuff

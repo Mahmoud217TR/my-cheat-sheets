@@ -38,7 +38,7 @@
 		
 - Pulling Changes `git pull`.
 		
-- Clone a project `git clone 'url'`.
+- Clone a project `git clone <repo url>`.
 	
 - Removing a file form repo `git rm <file path>`
 

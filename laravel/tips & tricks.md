@@ -11,7 +11,8 @@
 
 ## Adding Foreign ID to tables
 Assuming we want to add **User** Model foreign to **Profile** Table There is 2 ways to do this:
-1. Using the `User` Model: 
+1. Using the `User` Model:
+
     ```php
         // in Profile Migration file
         $table->foreignIdFor(User::class)->constrained()->onDelete('cascade');
@@ -26,8 +27,10 @@ Assuming we want to add **User** Model foreign to **Profile** Table There is 2 w
             return $this->belongsTo(User::class);
         }
     ```
+
     This will automatically generate a field called `user_id` to the migration file
 2. Manuallay:
+
     ```php
     // in Profile Migration file
     $table->unsignedBigInteger('user_id');
@@ -43,7 +46,9 @@ Assuming we want to add **User** Model foreign to **Profile** Table There is 2 w
             return $this->belongsTo(User::class);
     }
     ```
+
     With this way you can change foreign key name:
+
     ```php
     // in Profile Migration file
     $table->unsignedBigInteger('owner_id');
@@ -65,27 +70,36 @@ Assuming we want to add **User** Model foreign to **Profile** Table There is 2 w
 
 To make a pivot table between **Post** model and **Tag** model *many to many relationship*
 1. make a pivot migration:
-    - Create a migration `php artisan make:migration create_post_tag_pivot_table --create post_tag` *models must be in lexicographically order*
+    - Create a migration `php artisan make:migration create_post_tag_pivot_table --create post_tag` *models must be in lexicographical order*
+
 	- In the migration file add the foreign keys:
+
     ```php
-		$table->foreignIdFor(Post::class)->constrained()->onDelete('cascade');   // will generate a field called "post_id"
-        $table->foreignIdFor(Tag::class)->constrained()->onDelete('cascade');   // will generate a field called "tag_id"
+    $table->primary(['post_id', 'tag_id']); // To make it unique
+	$table->foreignIdFor(Post::class)->constrained()->onDelete('cascade');   // will generate a field called "post_id"
+    $table->foreignIdFor(Tag::class)->constrained()->onDelete('cascade');   // will generate a field called "tag_id"
     ```
+
     - Migrate `php artisan migrate`
 
 2. Define the relationship in the **Post** model:
+
     ```php
 	public function tags(){
 		return $this->belongsToMany(Tag::class);
 	}
     ```
+
 3. Define the relationship in the **Tag** model:
+
 	```php
     public function posts(){
 		return $this->belongsToMany(Post::class);
 	}
     ```
+
 * To deal with the models:
+
 	```php
     // From Post Model
     $post->tags()->attach($tag); 
@@ -101,7 +115,8 @@ To make a pivot table between **Post** model and **Tag** model *many to many rel
 
 ## Accessors & Mutators
 
-* Assume we have 4 states for `User` Model (Active, Inactive, Suspended, Banned)
+* Assume we have 4 states for `User` Model (Active, Inactive, Suspended, Banned):
+
     ```php
     // In User Migration
 
@@ -132,13 +147,15 @@ To make a pivot table between **Post** model and **Tag** model *many to many rel
 
 
 ## Flashing data into Session
+To flash some data in session:
 
-    ```php
-    session()->flash('key','value');
-	
-	session()->has('key')
-	session()->get('key')
-    ```
+```php
+session()->flash('key','value');
+
+// Dealing with it in the app
+session()->has('key')
+session()->get('key')
+```
 
 ## Makin your own helper functions
 
@@ -149,10 +166,10 @@ To make a pivot table between **Post** model and **Tag** model *many to many rel
     ```php
     <?php
     if (!function_exists('function_name')) {
-			function function_name($params){ 
-				// your code
-			} 
+		function function_name($params){ 
+			// your code
 		} 
+	} 
     ?>
     ```
 
@@ -178,6 +195,7 @@ back()->getTargetUrl()
 
 ## Make a state in factory
 To make a state in `Profile` Model factory for example write this:
+
 ```php
 // In Profile factory
 public function withoutUser(){
