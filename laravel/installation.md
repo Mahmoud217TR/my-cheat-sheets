@@ -7,7 +7,7 @@
 
 ## Installation Guide
 
-1.Install Php
+1. Install PHP
 * Extract the files at path `(C:\php)`
 * Rename `(C:\php\php.ini-development)` to `(C:\php\php.ini)`
 * Add `(C:\php)` to the path environment variable
@@ -23,9 +23,9 @@
     extension=fileinfo
     ```
 
-2.Install Composer
+2. Install Composer
 
-3.Install Node
+3. Install Node
 
-4.Install Laravel using Composer
+4. Install Laravel using Composer
 * Run this command on CMD `composer global require laravel/installer`
