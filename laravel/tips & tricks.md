@@ -7,6 +7,7 @@
 * [Flashing data into Session](#flashing-data-into-session)
 * [Get Back Route as URL](#get-back-route-as-url)
 * [Make a state in factory](#make-a-state-in-factory)
+* [Force HTTPS Scheme](#force-https-scheme)
 
 
 ## Adding Foreign ID to tables
@@ -208,4 +209,12 @@ public function withoutUser(){
 
 // To use it
 Profile::factory()->withoutUser()->make();
+```
+
+## Force HTTPS Scheme
+To force https scheme on **production** put the following code in the `boot` method at `app\Providers\AppServiceProvider`:
+```php
+	if(config('app.env') === 'production') { // if app in production only
+        \URL::forceScheme('https');
+    }
 ```
