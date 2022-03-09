@@ -28,4 +28,4 @@
 3. Install Node
 
 4. Install Laravel using Composer
-* Run this command on CMD `composer global require laravel/installer`
+    * Run this command on CMD `composer global require laravel/installer`
