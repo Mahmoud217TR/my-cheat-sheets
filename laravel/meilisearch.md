@@ -1,13 +1,13 @@
 # Meilisearch
 
 **Table of Content:**
-    * [Installing Meilisearch to project](#installing-meilisearch-to-project)
-    * [Dealing with Meilisearch](#dealing-with-meilisearch)
-		* [To Search a Model](#to-search-a-model)
-		* [To Import a Model](#to-import-a-model)
-		* [To Flush a Model](#to-flush-a-model)
-		* [To chose what to search with](#to-chose-what-to-search-with)
-		* [To allow search only on some status with](#to-allow-search-only-on-some-status-with)
+* [Installing Meilisearch to project](#installing-meilisearch-to-project)
+* [Dealing with Meilisearch](#dealing-with-meilisearch)
+	* [To Search a Model](#to-search-a-model)
+	* [To Import a Model](#to-import-a-model)
+	* [To Flush a Model](#to-flush-a-model)
+	* [To chose what to search with](#to-chose-what-to-search-with)
+	* [To allow search only on some status with](#to-allow-search-only-on-some-status-with)
 
 ## Installing Meilisearch to project
 1. Install Laravel Scout `composer require laravel/scout`

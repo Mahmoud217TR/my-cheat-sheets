@@ -1,8 +1,8 @@
 # Starting new Laravel Project
 
 **Table of Content:**
-    * [Create Laravel Project](#create-laravel-project)
-    * [Preset Front-End (Vue & Bootstrap)](#preset-front-end-vue--bootstrap)
+* [Create Laravel Project](#create-laravel-project)
+* [Preset Front-End (Vue & Bootstrap)](#preset-front-end-vue--bootstrap)
 
 ## Create Laravel Project
 - Open CMD and write `laravel new project-name`
