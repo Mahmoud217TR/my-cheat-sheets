@@ -6,4 +6,4 @@
 * [Tips & Tricks](/laravel/tips%20%26%20tricks.md)
 * [Dealing with Policies](/laravel/dealing%20with%20policies.md)
 * [Meilisearch](/laravel/meilisearch.md)
-* [Deploying on Heroku](/laravel/heroku.md)
+* [Deploying on Heroku](/laravel/deploying%20on%20heroku.md.md)
