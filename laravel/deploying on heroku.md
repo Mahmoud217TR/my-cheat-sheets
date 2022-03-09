@@ -15,7 +15,7 @@
 1. Create a file and name it `Procfile` and write the following in it:
 
 ```
-web: vendor/bin/heroku-php-apache2 public/)
+web: vendor/bin/heroku-php-apache2 public/
 ```
 
 2. Create a Heroku project, use `heroku create 'project name'`.
