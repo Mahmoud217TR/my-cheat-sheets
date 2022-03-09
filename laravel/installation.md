@@ -1,6 +1,6 @@
 # Laravel Installation
 
-**Table of Content:**
+**Table of Contents:**
 * [Requirements](#requirements)
 * [Installation Guide](#installation-guide)
 

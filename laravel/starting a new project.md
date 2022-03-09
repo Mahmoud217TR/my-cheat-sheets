@@ -1,6 +1,6 @@
 # Starting new Laravel Project
 
-**Table of Content:**
+**Table of Contents:**
 * [Create Laravel Project](#create-laravel-project)
 * [Preset Front-End (Vue & Bootstrap)](#preset-front-end-vue--bootstrap)
 

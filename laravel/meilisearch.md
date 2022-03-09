@@ -1,6 +1,6 @@
 # Meilisearch
 
-**Table of Content:**
+**Table of Contents:**
 * [Installing Meilisearch to project](#installing-meilisearch-to-project)
 * [Dealing with Meilisearch](#dealing-with-meilisearch)
 	* [To Search a Model](#to-search-a-model)
