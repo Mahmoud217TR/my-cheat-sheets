@@ -1,5 +1,9 @@
 # Laravel Installation
 
+**Table of Content:**
+    * [Requirements](#requirements)
+    * [Installation Guide](#installation-guide)
+
 ## Requirements
 * [php](https://www.php.net/downloads.php)
 * [composer](https://getcomposer.org)

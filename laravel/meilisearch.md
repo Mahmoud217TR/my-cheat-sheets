@@ -1,5 +1,14 @@
 # Meilisearch
 
+**Table of Content:**
+    * [Installing Meilisearch to project](#installing-meilisearch-to-project)
+    * [Dealing with Meilisearch](#dealing-with-meilisearch)
+		* [To Search a Model](#to-search-a-model)
+		* [To Import a Model](#to-import-a-model)
+		* [To Flush a Model](#to-flush-a-model)
+		* [To chose what to search with](#to-chose-what-to-search-with)
+		* [To allow search only on some status with](#to-allow-search-only-on-some-status-with)
+
 ## Installing Meilisearch to project
 1. Install Laravel Scout `composer require laravel/scout`
 		
@@ -18,18 +27,21 @@
 	
 6. Import Data to MeiliSearch `php artisan scout:import "App\Models\Post"`
 
-## Dealing with Meilisearch		
-- To Search a Model
+## Dealing with Meilisearch	
+
+### To Search a Model
 	```php
 	$query = "Learn Laravel";
 	$posts = Post::search($query)->take(10)->get();
 	```
 
-- To Import a Model `php artisan scout:import "App\Models\Post"` *Post Model for example*
+### To Import a Model 
+- use the command: `php artisan scout:import "App\Models\Post"` *Post Model for example*
 
-- To Flush a Model  `php artisan scout:flush "App\Models\Post"` *Post Model for example*
+### To Flush a Model
+- use the command: `php artisan scout:flush "App\Models\Post"` *Post Model for example*
 	
-- To chose what to search with:
+### To chose what to search with
 	```php
 	#[SearchUsingPrefix(['id'])]	// Search using Prefix
     #[SearchUsingFullText(['title','content','author'])]	// Search using Full Text (Default)
@@ -44,7 +56,7 @@
     }
 	```
 
-- To allow search only on some status with:
+### To allow search only on some status with
 	```php
 	public function shouldBeSearchable(){
         return $this->isPublished();
