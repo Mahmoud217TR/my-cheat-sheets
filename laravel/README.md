@@ -18,7 +18,7 @@
     * [Dealing with Authentication](/laravel/tips%20%26%20tricks.md#dealing-with-authentication)
     * [Blade](/laravel/tips%20%26%20tricks.md#blade)
     * [Dynamic Page Titles](/laravel/tips%20%26%20tricks.md#dynamic-page-titles)
-    * [Cookies](#cookies)
+    * [Cookies](/laravel/tips%20%26%20tricks.md#dynamic-page-titles#cookies)
 * [Dealing with Policies](/laravel/dealing%20with%20policies.md)
     * [Creating a Policy](/laravel/dealing%20with%20policies.md#creating-a-policy)
     * [Dealing with Policy](/laravel/dealing%20with%20policies.md#dealing-with-policy)
