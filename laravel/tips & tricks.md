@@ -8,6 +8,9 @@
 * [Get Back Route as URL](#get-back-route-as-url)
 * [Make a state in factory](#make-a-state-in-factory)
 * [Force HTTPS Scheme](#force-https-scheme)
+* [Dealing with Authentication](#dealing-with-authentication)
+* [Blade](#blade)
+* [Dynamic Page Titles](#dynamic-page-titles)
 
 
 ## Adding Foreign ID to tables
@@ -195,6 +198,7 @@ back()->getTargetUrl()
 ```
 
 ## Make a state in factory
+
 To make a state in `Profile` Model factory for example write this:
 
 ```php
@@ -212,9 +216,98 @@ Profile::factory()->withoutUser()->make();
 ```
 
 ## Force HTTPS Scheme
+
 To force https scheme on **production** put the following code in the `boot` method at `app\Providers\AppServiceProvider`:
 ```php
 	if(config('app.env') === 'production') { // if app in production only
         \URL::forceScheme('https');
     }
+```
+
+
+## Dealing with Authentication
+
+- To Deal with the authenticated user:
+
+    ```php
+    Auth::check();  // Determine if the current user is authenticated
+    Auth::user();   // Get the currently authenticated user
+    Auth::id();     // Get the ID of the currently authenticated user
+    ```
+
+- For Login & Logout:
+    ```php
+    Auth::attempt(array('email' => $email, 'password' => $password)); // Attempt to authenticate a user using the given credentials
+
+    Auth::attempt($credentials, true); // 'Remember me' by passing true to Auth::attempt()
+
+    Auth::once($credentials);   // Log in for a single request
+
+    Auth::login(User::find(1)); // Log a user into the application
+    Auth::loginUsingId(1);      // Log the given user ID into the application
+    
+    Auth::logout();  // Log the user out of the application
+    
+    Auth::validate($credentials);   // Validate a user's credentials
+    ```
+
+
+## Blade
+
+- To make app template named `app` make a view called `app.blade.php` and should look like:
+
+    ```blade
+    <!-- template contents -->
+
+    @yield('content') <!-- here where the other pages should appear -->
+
+    <!-- template contents -->
+    ```
+
+    The Oher views the uses the previous template should be like:
+
+    ```blade
+    @extends('app')
+    @section('content')
+
+    <!-- view contents -->
+
+    @section('content')
+    ```
+
+- To include a view called `navbar` for example in the current view use:
+
+    ```blade
+    @include('navbar')
+    ```
+
+- Echoing:
+
+    ```blade
+    {{ $var }}  <!-- Echo content -->
+
+    {{{ $var }}}    <!-- Echo escaped content -->
+
+    {!! $var !!} <!-- Echo unescaped content -->
+
+    {{-- Blade Comment --}} <!-- Blade Comment -->
+    
+    {{{ $name or 'Default' }}} <!-- Echoing Data After Checking For Existence  -->
+    
+    @{{ This will not be processed by Blade }} <!-- Displaying Raw Text With Curly Braces -->
+    ```
+
+
+## Dynamic Page Titles
+
+To make the page title dynamic use this in `app.blade.view`:
+
+```blade
+<title>@yield('title',config('app.name', 'Laravel'))</title>
+```
+
+In the pages use:
+```blade
+@extends('app')
+@section('title','Page Title')
 ```
