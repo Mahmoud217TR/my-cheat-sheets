@@ -11,6 +11,7 @@
 * [Dealing with Authentication](#dealing-with-authentication)
 * [Blade](#blade)
 * [Dynamic Page Titles](#dynamic-page-titles)
+* [Cookies](#cookies)
 
 
 ## Adding Foreign ID to tables
@@ -311,3 +312,26 @@ In the pages use:
 @extends('app')
 @section('title','Page Title')
 ```
+
+
+## Cookies
+
+- To get a cookie value:
+
+    ```php
+    Cookie::get('key');
+    Cookie::get('key', 'default');
+    ```
+
+- To create a cookie:
+
+    ```php
+    Cookie::forever('key', 'value');
+    Cookie::make('key', 'value', 'minutes');
+    ```
+
+- To forget (remove) a cookie:
+
+    ```php
+    Cookie::forget('key');
+    ```
