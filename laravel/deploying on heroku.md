@@ -14,9 +14,9 @@
 
 1. Create a file and name it `Procfile` and write the following in it:
 
-```
-web: vendor/bin/heroku-php-apache2 public/
-```
+    ```
+    web: vendor/bin/heroku-php-apache2 public/
+    ```
 
 2. Create a Heroku project, use `heroku create 'project name'`.
 
@@ -24,34 +24,34 @@ web: vendor/bin/heroku-php-apache2 public/
 
 4. Make a commit and push it to the repository:
 
-```
-git add .
-git commit -m 'uploading on heroku'
-git push heroku main
-```
+    ```
+    git add .
+    git commit -m 'uploading on heroku'
+    git push heroku main
+    ```
 
 5. Add Config Vars:
 
-```
-APP_DEBUG	: 	true
-APP_ENV		: 	production
-APP_KEY		:	FROM '.env' FILE
-APP_NAME	:	YOUR APP NAME
-```
+    ```
+    APP_DEBUG	: 	true
+    APP_ENV		: 	production
+    APP_KEY		:	FROM '.env' FILE
+    APP_NAME	:	YOUR APP NAME
+    ```
 
 6. Add `Heroku Postgres` Plugin for database and get credentials, you can use `pg:credentials:url` to get credentials.
 
 7. Add database credentials to Config Vars:
 
-```
-DATABASE_URL	    :   FROM CREDENTIALS
-DB_CONNECTION	    :	pgsql
-DB_DATABASE		:   FROM CREDENTIALS
-DB_HOST			:   FROM CREDENTIALS
-DB_PASSWORD		:   FROM CREDENTIALS
-DB_PORT			:   FROM CREDENTIALS
-DB_USERNAME		:   FROM CREDENTIALS
-```
+    ```
+    DATABASE_URL	    :   FROM CREDENTIALS
+    DB_CONNECTION	    :	pgsql
+    DB_DATABASE		:   FROM CREDENTIALS
+    DB_HOST			:   FROM CREDENTIALS
+    DB_PASSWORD		:   FROM CREDENTIALS
+    DB_PORT			:   FROM CREDENTIALS
+    DB_USERNAME		:   FROM CREDENTIALS
+    ```
 	
 8. Run migrate command `heroku run php artisan migrate`.
 

@@ -19,42 +19,42 @@ Model::all()->paginate(10);
 
 ## Adding Navigators Automatically
 
-- If you want to add the `Next` & `Previous` navigators:
+If you want to add the `Next` & `Previous` navigators:
 
-    ```php
-    $model = Model::simplePaginate(10);
-    ```
+```php
+$model = Model::simplePaginate(10);
+```
 
-- To display the navigators in the view:
-    
-    ```blade
-    {{ $model->links(); }}
-    ```
+To display the navigators in the view:
+
+```blade
+{{ $model->links(); }}
+```
 
 ## Adding Navigators Manually
 
-- It's **Recommended** to use the `paginate` method:
+It's **Recommended** to use the `paginate` method:
 
-    ```php
-    $model = Model::paginate(10); 
-    ```
+```php
+$model = Model::paginate(10); 
+```
 
-- In the view:
+In the view:
 
-    ```blade
-        <!-- Previous link -->
-        @if($model->currentPage() > 1)
-        <a href="$model->previousPageUrl()">Previous</a>
-        @endif
+```blade
+    <!-- Previous link -->
+    @if($model->currentPage() > 1)
+    <a href="$model->previousPageUrl()">Previous</a>
+    @endif
 
-        <!-- Current Page Number -->
-        <span> {{ $model->currentPage() }} </span>
+    <!-- Current Page Number -->
+    <span> {{ $model->currentPage() }} </span>
 
-        <!-- Next link -->
-        @if($model->hasMorePages())
-        <a href="$model->nextPageUrl()">Next</a>
-        @endif
-    ```
+    <!-- Next link -->
+    @if($model->hasMorePages())
+    <a href="$model->nextPageUrl()">Next</a>
+    @endif
+```
 
 
 ## Paginator Methods Table

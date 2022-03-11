@@ -12,6 +12,7 @@
 * [Blade](#blade)
 * [Dynamic Page Titles](#dynamic-page-titles)
 * [Cookies](#cookies)
+* [Redirecting](#redirecting)
 
 
 ## Adding Foreign ID to tables
@@ -33,7 +34,8 @@ Assuming we want to add **User** Model foreign to **Profile** Table There is 2 w
         }
     ```
 
-    This will automatically generate a field called `user_id` to the migration file
+    This will automatically generate a field called `user_id` to the migration file.
+
 2. Manuallay:
 
     ```php
@@ -120,38 +122,39 @@ To make a pivot table between **Post** model and **Tag** model *many to many rel
 
 ## Accessors & Mutators
 
-* Assume we have 4 states for `User` Model (Active, Inactive, Suspended, Banned):
+Assume we have 4 states for `User` Model (Active, Inactive, Suspended, Banned):
 
-    ```php
-    // In User Migration
+```php
+// In User Migration
 
-    $table->unsignedBigInteger('state'); // assuming the states are (0, 1, 2, 3)
+$table->unsignedBigInteger('state'); // assuming the states are (0, 1, 2, 3)
 
 
-    // In User Model
+// In User Model
 
-    // To ease getting states 
-    public static function getState(){
-        return [
-            0 => 'Active',
-            1 => 'Inactive',
-            2 => 'Suspended',
-            3 => 'Banned'
-        ];
-    }
+// To ease getting states 
+public static function getState(){
+    return [
+        0 => 'Active',
+        1 => 'Inactive',
+        2 => 'Suspended',
+        3 => 'Banned'
+    ];
+}
 
-    // The Accessor & Mutator
-    public function getStateAttribute($attribute){
-        return self::getState()[$attribute];
-    }
-    
-    // Any where in app
-    User::getState()    // returns all User states as text (Active, Inactive, Suspended, Banned)
-    $user->state;       // returns the current user state as text
-    ```
+// The Accessor & Mutator
+public function getStateAttribute($attribute){
+    return self::getState()[$attribute];
+}
+
+// Any where in app
+User::getState()    // returns all User states as text (Active, Inactive, Suspended, Banned)
+$user->state;       // returns the current user state as text
+```
 
 
 ## Flashing data into Session
+
 To flash some data in session:
 
 ```php
@@ -228,75 +231,76 @@ To force https scheme on **production** put the following code in the `boot` met
 
 ## Dealing with Authentication
 
-- To Deal with the authenticated user:
+To Deal with the authenticated user:
 
-    ```php
-    Auth::check();  // Determine if the current user is authenticated
-    Auth::user();   // Get the currently authenticated user
-    Auth::id();     // Get the ID of the currently authenticated user
-    ```
+```php
+Auth::check();  // Determine if the current user is authenticated
+Auth::user();   // Get the currently authenticated user
+Auth::id();     // Get the ID of the currently authenticated user
+```
 
-- For Login & Logout:
-    ```php
-    Auth::attempt(array('email' => $email, 'password' => $password)); // Attempt to authenticate a user using the given credentials
+For Login & Logout:
 
-    Auth::attempt($credentials, true); // 'Remember me' by passing true to Auth::attempt()
+```php
+Auth::attempt(array('email' => $email, 'password' => $password)); // Attempt to authenticate a user using the given credentials
 
-    Auth::once($credentials);   // Log in for a single request
+Auth::attempt($credentials, true); // 'Remember me' by passing true to Auth::attempt()
 
-    Auth::login(User::find(1)); // Log a user into the application
-    Auth::loginUsingId(1);      // Log the given user ID into the application
-    
-    Auth::logout();  // Log the user out of the application
-    
-    Auth::validate($credentials);   // Validate a user's credentials
-    ```
+Auth::once($credentials);   // Log in for a single request
+
+Auth::login(User::find(1)); // Log a user into the application
+Auth::loginUsingId(1);      // Log the given user ID into the application
+
+Auth::logout();  // Log the user out of the application
+
+Auth::validate($credentials);   // Validate a user's credentials
+```
 
 
 ## Blade
 
-- To make app template named `app` make a view called `app.blade.php` and should look like:
+To make app template named `app` make a view called `app.blade.php` and should look like:
 
-    ```blade
-    <!-- template contents -->
+```blade
+<!-- template contents -->
 
-    @yield('content') <!-- here where the other pages should appear -->
+@yield('content') <!-- here where the other pages should appear -->
 
-    <!-- template contents -->
-    ```
+<!-- template contents -->
+```
 
-    The Oher views the uses the previous template should be like:
+The Oher views the uses the previous template should be like:
 
-    ```blade
-    @extends('app')
-    @section('content')
+```blade
+@extends('app')
+@section('content')
 
-    <!-- view contents -->
+<!-- view contents -->
 
-    @section('content')
-    ```
+@section('content')
+```
 
-- To include a view called `navbar` for example in the current view use:
+To include a view called `navbar` for example in the current view use:
 
-    ```blade
-    @include('navbar')
-    ```
+```blade
+@include('navbar')
+```
 
-- Echoing:
+Echoing:
 
-    ```blade
-    {{ $var }}  <!-- Echo content -->
+```blade
+{{ $var }}  <!-- Echo content -->
 
-    {{{ $var }}}    <!-- Echo escaped content -->
+{{{ $var }}}    <!-- Echo escaped content -->
 
-    {!! $var !!} <!-- Echo unescaped content -->
+{!! $var !!} <!-- Echo unescaped content -->
 
-    {{-- Blade Comment --}} <!-- Blade Comment -->
-    
-    {{{ $name or 'Default' }}} <!-- Echoing Data After Checking For Existence  -->
-    
-    @{{ This will not be processed by Blade }} <!-- Displaying Raw Text With Curly Braces -->
-    ```
+{{-- Blade Comment --}} <!-- Blade Comment -->
+
+{{{ $name or 'Default' }}} <!-- Echoing Data After Checking For Existence  -->
+
+@{{ This will not be processed by Blade }} <!-- Displaying Raw Text With Curly Braces -->
+```
 
 
 ## Dynamic Page Titles
@@ -308,6 +312,7 @@ To make the page title dynamic use this in `app.blade.view`:
 ```
 
 In the pages use:
+
 ```blade
 @extends('app')
 @section('title','Page Title')
@@ -316,22 +321,51 @@ In the pages use:
 
 ## Cookies
 
-- To get a cookie value:
+To get a cookie value:
 
-    ```php
-    Cookie::get('key');
-    Cookie::get('key', 'default');
-    ```
+```php
+Cookie::get('key');
+Cookie::get('key', 'default');
+```
 
-- To create a cookie:
+To create a cookie:
 
-    ```php
-    Cookie::forever('key', 'value');
-    Cookie::make('key', 'value', 'minutes');
-    ```
+```php
+Cookie::forever('key', 'value');
+Cookie::make('key', 'value', 'minutes');
+```
 
-- To forget (remove) a cookie:
+To forget (remove) a cookie:
 
-    ```php
-    Cookie::forget('key');
-    ```
+```php
+Cookie::forget('key');
+```
+
+## Redirecting
+
+To Redirect to a URL:
+
+```php
+return Redirect::to('url');
+return Redirect::to('url')->with('key', 'value'); // Passing Data
+```
+
+To Redirect to a Route:
+
+```php 
+return Redirect::route('route.name'));
+return Redirect::route('route.name',compact('data'))); // Passing Data
+```
+
+To Redirect to the previous location:
+
+```php
+return Redirect::back();
+```
+
+To Redirect to a Controller called `Controller` action called `action` for example:
+
+```php
+return Redirect::action('Controller::action');
+return Redirect::action('Controller::action', compact('data')); // Passing Data
+```
