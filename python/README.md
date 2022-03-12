@@ -39,3 +39,8 @@
 * [Dictionaries in Python](/python/python%20dictionaries.md)
     * [Creating a Dictionary](/python/python%20dictionaries.md#creating-a-dictionary)
     * [Getting value from Dictionary](/python/python%20dictionaries.md#getting-value-from-dictionary)
+
+* [Try & Except in Python](/python/python%20try%20and%20except.md)
+    * [Try & Except Syntax](/python/python%20try%20and%20except.md#try--except-syntax)
+    * [Finally](/python/python%20try%20and%20except.md#finally)
+    * [Exception Types](/python/python%20try%20and%20except.md#exception-types)
