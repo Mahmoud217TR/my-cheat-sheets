@@ -116,16 +116,17 @@ for loop similar to while but works on different data types:
 
 
 ## Importing
+
 To use External Modules:
 
-- Importing function :
+Importing function :
 
 ```python
 import math
 import ....
 ```
 
--Using From:
+Using From:
 
 ```python
 from math import factorial
@@ -134,12 +135,13 @@ from math import *
 from .... import *
 ```
 
-- You can also use:
+You can also use:
 
 ```python
 import math as m # m.factorial()
 from math import factorial as f	# f()
 ```
+
 
 ## Common Functions
 
