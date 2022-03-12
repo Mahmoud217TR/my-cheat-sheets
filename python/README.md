@@ -1,0 +1,41 @@
+# Python Cheat Sheets
+
+**Table of Contents:**
+* [Python Basics Cheat Sheet](/python/python%20basics%20cheat%20sheet.md)
+    * [Basic Operations](/python/python%20basics%20cheat%20sheet.md#basic-operations)
+    * [Conditions](/python/python%20basics%20cheat%20sheet.md#conditions)
+    * [Loops](/python/python%20basics%20cheat%20sheet.md#loops)
+    * [Importing](/python/python%20basics%20cheat%20sheet.md#importing)
+    * [Common Functions](/python/python%20basics%20cheat%20sheet.md#common-functions)
+    * [Functions](/python/python%20basics%20cheat%20sheet.md#functions)
+    * [Random](/python/python%20basics%20cheat%20sheet.md#random)
+
+* [Strings in Python](/python/strings%20in%20python.md)
+    * [Using Math Exepressions](/python/strings%20in%20python.md#using-math-exepressions)
+    * [String Formatting](/python/strings%20in%20python.md#string-formatting)
+    * [String Indexes](/python/strings%20in%20python.md#string-indexes)
+    * [Appending on String](/python/strings%20in%20python.md#appending-on-string)
+    * [The in keyword with strings](/python/strings%20in%20python.md#the-in-keyword-with-strings)
+    * [Count Characters in string](/python/strings%20in%20python.md#count-characters-in-string)
+    * [Spliting a string](/python/strings%20in%20python.md#spliting-a-string)
+    * [String Length](/python/strings%20in%20python.md#string-length)
+    
+* [Python Lists](/python/python%20lists.md)
+    * [Creating lists](/python/python%20lists.md#creating-lists)
+    * [List Indexes](/python/python%20lists.md#list-indexes)
+    * [List Count](/python/python%20lists.md#list-count)
+    * [List Length](/python/python%20lists.md#list-length)
+    * [List Appending](/python/python%20lists.md#list-appending)
+    * [List Inserting](/python/python%20lists.md#list-inserting)
+    * [Sorting Lists](/python/python%20lists.md#sorting-lists)
+    * [Unpacking Lists](/python/python%20lists.md#unpacking-lists)
+
+* [Python Tuples](/python/python%20tuples.md)
+    * [Tuples](/python/python%20tuples.md#tuples)
+    * [Creating Tuples](/python/python%20tuples.md#creating-tuples)
+    * [Tuples Indexes](/python/python%20tuples.md#tuples-indexes)
+    * [Tuples Count](/python/python%20tuples.md#tuples-count)
+
+* [Dictionaries in Python](/python/python%20dictionaries.md)
+    * [Creating a Dictionary](/python/python%20dictionaries.md#creating-a-dictionary)
+    * [Getting value from Dictionary](/python/python%20dictionaries.md#getting-value-from-dictionary)
