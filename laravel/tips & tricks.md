@@ -11,6 +11,7 @@
 * [Dynamic Page Titles](#dynamic-page-titles)
 * [Sending Requests using GuzzleHttp](#sending-requests-using-guzzlehttp)
 * [Getting Values from environment file](#getting-values-from-environment-file)
+* [Adding a fav icon](#adding-a-fav-icon)
 
 ## Adding Foreign ID to tables
 Assuming we want to add **User** Model foreign to **Profile** Table There is 2 ways to do this:
@@ -310,3 +311,15 @@ To get a value of `SOME_CUSTOM_KEY`:
 ```php
 echo env('SOME_CUSTOM_KEY') // prints 10
 ```
+
+## Adding a fav icon
+
+If you want to add a fav icon to your website:
+
+- make the logo in `ico` format for example the file name is `logo.ico`.
+- put the `.ico` in `public/images` folder.
+- put this in the header:
+
+    ```blade
+    <link rel="shortcut icon" href="{{ asset('images/logo.ico') }}" type="image/x-icon">
+    ```
