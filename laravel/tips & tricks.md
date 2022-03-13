@@ -9,6 +9,8 @@
 * [Make a state in factory](#make-a-state-in-factory)
 * [Force HTTPS Scheme](#force-https-scheme)
 * [Dynamic Page Titles](#dynamic-page-titles)
+* [Sending Requests using GuzzleHttp](#sending-requests-using-guzzlehttp)
+* [Getting Values from environment file](#getting-values-from-environment-file)
 
 ## Adding Foreign ID to tables
 Assuming we want to add **User** Model foreign to **Profile** Table There is 2 ways to do this:
@@ -239,4 +241,72 @@ In the pages use:
 ```blade
 @extends('app')
 @section('title','Page Title')
+```
+
+
+## Sending Requests using GuzzleHttp
+
+To send requests to an external API `https://api.example.com/action` for example use [Guzzle](https://docs.guzzlephp.org/en/latest/overview.html):
+
+```php
+use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Request as GuzzleRequest;
+
+public function sendRequest(){
+
+    $client = new Client(['verify' => false]); // ['verify' => false] For HTTP
+
+    $method = 'GET';
+    $uri = 'https://api.example.com/action';
+    $headers = ['Content-Type' => 'application/json','Accept' => 'application/json'];
+    $body = json_encode(['key' => 'value']);
+
+    $request = new GuzzleRequest($method,$uri,$headers,$body);
+    $response = $client->send($request);
+
+    // Checking response
+    echo $response->getStatusCode(); // if everything works should return 200
+    echo $response->getBody();
+}
+```
+
+For a **Cleaner** code and **Better** Practice:
+
+```php
+use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Request as GuzzleRequest;
+
+private function sendRequest($method,$uri,$headers,$body){
+    $client = new Client(['verify' => false]); // ['verify' => false] For HTTP
+    $request = new GuzzleRequest($method,$uri,$headers,$body);
+    return $client->send($request);
+}
+
+public function testing(){
+
+    $method = 'GET';
+    $uri = 'https://api.example.com/action';
+    $headers = ['Content-Type' => 'application/json','Accept' => 'application/json'];
+    $body = json_encode(['key' => 'value']);
+    
+    $response = $this->sendRequest($method,$uri,$headers,$body);
+
+    // Checking response
+    echo $response->getStatusCode(); // if everything works should return 200
+    echo $response->getBody();
+}
+```
+
+## Getting Values from environment file
+
+Let's say the `.env` file looks like this:
+
+```
+SOME_CUSTOM_KEY = 10
+```
+
+To get a value of `SOME_CUSTOM_KEY`:
+
+```php
+echo env('SOME_CUSTOM_KEY') // prints 10
 ```

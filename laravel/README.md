@@ -18,6 +18,8 @@
     * [Make a state in factory](/laravel/tips%20%26%20tricks.md#make-a-state-in-factory)
     * [Force HTTPS Scheme](/laravel/tips%20%26%20tricks.md#force-https-scheme)
     * [Dynamic Page Titles](/laravel/tips%20%26%20tricks.md#dynamic-page-titles)
+    * [Sending Requests using GuzzleHttp](/laravel/tips%20%26%20tricks.md#sending-requests-using-guzzlehttp)
+    * [Getting Values from environment file](/laravel/tips%20%26%20tricks.md#getting-values-from-environment-file)
 
 * [Dealing with Policies](/laravel/dealing%20with%20policies.md)
     * [Creating a Policy](/laravel/dealing%20with%20policies.md#creating-a-policy)
