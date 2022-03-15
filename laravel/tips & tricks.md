@@ -316,7 +316,7 @@ echo env('SOME_CUSTOM_KEY') // prints 10
 
 If you want to add a fav icon to your website:
 
-- make the logo in `ico` format for example the file name is `logo.ico`.
+- make the logo in `ico` format for example make the file name is `logo.ico`.
 - put the `.ico` in `public/images` folder.
 - put this in the header:
 
