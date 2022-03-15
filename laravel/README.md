@@ -27,6 +27,12 @@
     * [Dealing with Policy](/laravel/dealing%20with%20policies.md#dealing-with-policy)
     * [Guest Approach (Null User) in Policies](/laravel/dealing%20with%20policies.md#guest-approach-null-user-in-policies)
 
+* [Events & Listeners](/laravel/events%20%26%20listners.md)
+    * [Events](/laravel/events%20%26%20listners.md#events)
+    * [Listners](/laravel/events%20%26%20listners.md#listners)
+    * [Attaching Event to Listners](/laravel/events%20%26%20listners.md#attaching-event-to-listners)
+    * [Generating Events & Listeners](/laravel/events%20%26%20listners.md#generating-events--listeners)
+
 * [Blade](/laravel/blade.md)
     * [Blade Templates](/laravel/blade.md#blade-templates)
     * [Including Views](/laravel/blade.md#including-views)
