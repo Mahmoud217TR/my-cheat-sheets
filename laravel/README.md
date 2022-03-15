@@ -48,7 +48,14 @@
     * [Requirements](/laravel/deploying%20on%20heroku.md#requirements)
     * [Deploying](/laravel/deploying%20on%20heroku.md#deploying)
     * [Notes](/laravel/deploying%20on%20heroku.md#notes)
-    
+
+* [Queuing Jobs](/laravel/queuing%20jobs.md)
+    * [Making class a Queueable Job](/laravel/queuing%20jobs.md#making-class-a-queueable-job)
+    * [Setting Queue Connection](/laravel/queuing%20jobs.md#setting-queue-connection)
+    * [Chosing Queue Drivers](/laravel/queuing%20jobs.md#chosing-queue-drivers)
+    * [Using database Driver](/laravel/queuing%20jobs.md#using-database-driver)
+    * [Processing Jobs](/laravel/queuing%20jobs.md#processing-jobs)
+
 * [Meilisearch](/laravel/meilisearch.md)
     * [Installing Meilisearch to project](/laravel/meilisearch.md#installing-meilisearch-to-project)
     * [Dealing with Meilisearch](/laravel/meilisearch.md#dealing-with-meilisearch)

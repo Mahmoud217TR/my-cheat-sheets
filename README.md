@@ -10,6 +10,7 @@
     * [Blade](/laravel/blade.md)
     * [Pagination](/laravel/pagination.md)
     * [Deploying on Heroku](/laravel/deploying%20on%20heroku.md)
+    * [Queuing Jobs](/laravel/queuing%20jobs.md)
     * [Meilisearch](/laravel/meilisearch.md)
     * [Artisan Commands](/laravel/artisan%20commands.md)
     * [Cookies](/laravel/cookies.md)
