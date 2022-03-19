@@ -12,6 +12,7 @@
 * [Tips & Tricks](/laravel/tips%20%26%20tricks.md)
     * [Adding Foreign ID to tables](/laravel/tips%20%26%20tricks.md#adding-foreign-id-to-tables)
     * [Making Pivot Tables](/laravel/tips%20%26%20tricks.md#making-pivot-tables)
+    * [Many To Many with data](/laravel/tips%20%26%20tricks.md#many-to-many-with-data)
     * [Accessors & Mutators](/laravel/tips%20%26%20tricks.md#accessors--mutators)
     * [Flashing data into Session](/laravel/tips%20%26%20tricks.md#flashing-data-into-session)
     * [Get Back Route as URL](/laravel/tips%20%26%20tricks.md#get-back-route-as-url)

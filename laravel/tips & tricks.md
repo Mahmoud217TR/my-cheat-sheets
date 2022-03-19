@@ -3,6 +3,7 @@
 **Table of Contents:**
 * [Adding Foreign ID to tables](#adding-foreign-id-to-tables)
 * [Making Pivot Tables](#making-pivot-tables)
+* [Many To Many with data](#many-to-many-with-data)
 * [Accessors & Mutators](#accessors--mutators)
 * [Flashing data into Session](#flashing-data-into-session)
 * [Get Back Route as URL](#get-back-route-as-url)
@@ -116,6 +117,76 @@ To make a pivot table between **Post** model and **Tag** model *many to many rel
 	$tag->posts()->detach($post);
 	$tag->posts()->toggle($post);
     ```
+
+
+## Many To Many with data
+
+Let's say that we hava a `User` Model which can vote up or vote down a `Post` Model to make such a relationship:
+
+1. Make the migration and let's call the table `post_votes`:
+
+```
+php artisan make:migration create_post_votes_table --create post_votes
+```
+
+2. Set the table columns:
+
+```php
+$table->primary(['post_id', 'user_id']);
+$table->foreignIdFor(Post::class)->constrained()->onDelete('cascade');
+$table->foreignIdFor(User::class)->constrained()->onDelete('cascade');
+$table->boolean('upvote'); // is up vote or down vote
+```
+
+3. Define the relationships in Models:
+
+```php
+// in User Model
+public function postVotes(){
+    return $this->belongsToMany(Post::class,'post_user','user_id')->withPivot('upvote'); // get the column with result
+}
+
+// in Post Model
+public function userVotes(){
+    return $this->belongsToMany(User::class,'post_user','post_id')->withPivot('upvote'); // get the column with result
+}
+
+```
+
+4. To attach or detach models:
+
+```php
+// Attaching
+$user->postVotes()->attach($post,['upvote'=>$value]);
+$post->userVotes()->attach($user,['upvote'=>$value]);
+
+// Detaching
+$user->postVotes()->detach($post);
+$post->userVotes()->detach($user);
+```
+
+5. Some extra Functions:
+
+```php
+
+// in User Model
+public function postUpvotes(){
+    return $this->postVotes->where('pivot.upvote',true);
+}
+
+public function postDownvotes(){
+    return $this->postVotes->where('pivot.upvote',false);
+}
+
+// in Post Model
+public function userUpvotes(){
+    return $this->UserVotes->where('pivot.upvote',true);
+}
+
+public function userDownvotes(){
+    return $this->UserVotes->where('pivot.upvote',false);
+}
+```
 
 
 ## Accessors & Mutators
