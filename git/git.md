@@ -1,4 +1,4 @@
-# Github CheatSheet
+# Git CheatSheet
 
 **Table of Contents:**
 * [Dealing with Github](#dealing-with-github)

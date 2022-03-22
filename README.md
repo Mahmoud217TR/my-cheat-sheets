@@ -27,4 +27,4 @@
     * [Try & Except in Python](/python/python%20try%20and%20except.md)
 
 * [Git](/git/)
-    * [Github Cheat Sheet](/git/github.md)
+    * [Github Cheat Sheet](/git/git.md)
