@@ -1,9 +1,9 @@
 # Git CheatSheet
 
 **Table of Contents:**
-* [Dealing with Github](#dealing-with-github)
+* [Dealing with Git](#dealing-with-git)
 
-## Dealing with Github
+## Dealing with Git
 - Initilizing a repository `git init`.
 		
 - Add a file to staging area:
