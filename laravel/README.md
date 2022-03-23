@@ -20,7 +20,7 @@
     * [Getting Values from environment file](/laravel/tips%20%26%20tricks.md#getting-values-from-environment-file)
     * [Adding a fav icon](/laravel/tips%20%26%20tricks.md#adding-a-fav-icon)
 
-* [Databse Tricks](/laravel/database%20tricks.md)
+* [Database Tricks](/laravel/database%20tricks.md)
     * [Adding Foreign ID to tables](/laravel/database%20tricks.md#adding-foreign-id-to-tables)
     * [Making Pivot Tables](/laravel/database%20tricks.md#making-pivot-tables)
     * [Many To Many with data](/laravel/database%20tricks.md#many-to-many-with-data)
