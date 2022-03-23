@@ -18,7 +18,7 @@
     * [Dynamic Page Titles](/laravel/tips%20%26%20tricks.md#dynamic-page-titles)
     * [Sending Requests using GuzzleHttp](/laravel/tips%20%26%20tricks.md#sending-requests-using-guzzlehttp)
     * [Getting Values from environment file](/laravel/tips%20%26%20tricks.md#getting-values-from-environment-file)
-    * [Adding a fav icon](/laravel/tips%20%26%20tricks.md#adding-a-fav-icon)\
+    * [Adding a fav icon](/laravel/tips%20%26%20tricks.md#adding-a-fav-icon)
     * [Activating Verification](/laravel/tips%20%26%20tricks.md#activating-verification)
 
 * [Database Tricks](/laravel/database%20tricks.md)
