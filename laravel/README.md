@@ -10,9 +10,6 @@
     * [Preset Front-End (Vue & Bootstrap)](/laravel/starting%20a%20new%20project.md#preset-front-end-vue--bootstrap)
 
 * [Tips & Tricks](/laravel/tips%20%26%20tricks.md)
-    * [Adding Foreign ID to tables](/laravel/tips%20%26%20tricks.md#adding-foreign-id-to-tables)
-    * [Making Pivot Tables](/laravel/tips%20%26%20tricks.md#making-pivot-tables)
-    * [Many To Many with data](/laravel/tips%20%26%20tricks.md#many-to-many-with-data)
     * [Accessors & Mutators](/laravel/tips%20%26%20tricks.md#accessors--mutators)
     * [Flashing data into Session](/laravel/tips%20%26%20tricks.md#flashing-data-into-session)
     * [Get Back Route as URL](/laravel/tips%20%26%20tricks.md#get-back-route-as-url)
@@ -22,6 +19,11 @@
     * [Sending Requests using GuzzleHttp](/laravel/tips%20%26%20tricks.md#sending-requests-using-guzzlehttp)
     * [Getting Values from environment file](/laravel/tips%20%26%20tricks.md#getting-values-from-environment-file)
     * [Adding a fav icon](/laravel/tips%20%26%20tricks.md#adding-a-fav-icon)
+
+* [Databse Tricks](/laravel/database%20tricks.md)
+    * [Adding Foreign ID to tables](/laravel/database%20tricks.md#adding-foreign-id-to-tables)
+    * [Making Pivot Tables](/laravel/database%20tricks.md#making-pivot-tables)
+    * [Many To Many with data](/laravel/database%20tricks.md#many-to-many-with-data)
 
 * [Dealing with Policies](/laravel/dealing%20with%20policies.md)
     * [Creating a Policy](/laravel/dealing%20with%20policies.md#creating-a-policy)
@@ -56,6 +58,7 @@
     * [Chosing Queue Drivers](/laravel/queuing%20jobs.md#chosing-queue-drivers)
     * [Using database Driver](/laravel/queuing%20jobs.md#using-database-driver)
     * [Processing Jobs](/laravel/queuing%20jobs.md#processing-jobs)
+    * [Dealing with workers in command line](/laravel/queuing%20jobs.md#dealing-with-workers-in-command-line)
 
 * [Meilisearch](/laravel/meilisearch.md)
     * [Installing Meilisearch to project](/laravel/meilisearch.md#installing-meilisearch-to-project)
@@ -69,6 +72,7 @@
     * [Maintenance Mode](/laravel/artisan%20commands.md#maintenance-mode)
     * [Creating Objects](/laravel/artisan%20commands.md#creating-objects)
     * [Dealing with Migrations](/laravel/artisan%20commands.md#dealing-with-migrations)
+    * [Making new artisan command](/laravel/artisan%20commands.md#making-new-artisan-command)
 
 * [Cookies](/laravel/cookies.md)
     * [Creating cookies](/laravel/cookies.md#creating-cookies)

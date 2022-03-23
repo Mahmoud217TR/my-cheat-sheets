@@ -8,6 +8,7 @@
 * [Maintenance Mode](#maintenance-mode)
 * [Creating Objects](#creating-objects)
 * [Dealing with Migrations](#dealing-with-migrations)
+* [Making new artisan command](#making-new-artisan-command)
 
 
 ## Generate Application Key
@@ -80,3 +81,34 @@ To Interact with your application use `php artisan tinker`.
 - To create database migration use `php artisan migrate:refresh`.
 
 - To show a list of migrations up/down use `php artisan migrate:status`.
+
+
+## Making new artisan command
+
+To Create new artisan command use:
+
+```
+php artisan make:command <command_name>
+```
+
+To Pass attributes add to the command:
+
+```php 
+// Passing an option named 'option'
+protected $signature = 'name:signature {option}';
+
+// The option is not required
+protected $signature = 'name:signature {option?}';
+
+// option with default value
+protected $signature = 'name:signature {option="default"}';
+
+// option with a letter
+protected $signature = 'name:signature {--o|option}';
+```
+
+To get the option with the key `option` value:
+
+```php
+$this->option('option');
+```

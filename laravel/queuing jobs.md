@@ -6,6 +6,7 @@
 * [Chosing Queue Drivers](#chosing-queue-drivers)
 * [Using database Driver](#using-database-driver)
 * [Processing Jobs](#processing-jobs)
+* [Dealing with workers in command line](#dealing-with-workers-in-command-line)
 
 
 ## Making class a Queueable Job
@@ -60,3 +61,23 @@ To Start processing jobs on the queue as a daemon:
 ```
 php artisan queue:work
 ```
+
+## Dealing with workers in command line
+
+* To run Laravel worker in the background just add `&` at the end of the command:
+
+    ```
+    php artisan queue work &
+    ```
+
+* To close Laravel Worker in the background use the command `kill <worker_pid>`.
+
+* To display workers use the command `jobs`.
+
+* To display workers with there PID use the command `jobs -l`.
+
+* To log the worker output to a file while running in the background use:
+
+    ```
+    php artisan queue:work > file.log &
+    ```
