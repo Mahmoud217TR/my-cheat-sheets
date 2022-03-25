@@ -19,6 +19,9 @@
     * [Hashing & Encryption](/laravel/hashing%20%26%20encryption.md)
     * [Authentication](/laravel/authentication.md)
 
+* [CSS](/css/)
+    * [CSS Tips & Tricks](/css/tips%20%26%20tricks.md)
+
 * [Python](/python/)
     * [Python Basics Cheat Sheet](/python/python%20basics%20cheat%20sheet.md)
     * [Strings in Python](/python/strings%20in%20python.md)
