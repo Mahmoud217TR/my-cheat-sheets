@@ -42,18 +42,18 @@ $model = Model::paginate(10);
 In the view:
 
 ```blade
-    <!-- Previous link -->
-    @if($model->currentPage() > 1)
-    <a href="$model->previousPageUrl()">Previous</a>
-    @endif
+<!-- Previous link -->
+@if($model->currentPage() > 1)
+    <a href="{{ $model->previousPageUrl() }}">Previous</a>
+@endif
 
-    <!-- Current Page Number -->
-    <span> {{ $model->currentPage() }} </span>
+<!-- Current Page Number -->
+<span> {{ $model->currentPage() }} </span>
 
-    <!-- Next link -->
-    @if($model->hasMorePages())
-    <a href="$model->nextPageUrl()">Next</a>
-    @endif
+<!-- Next link -->
+@if($model->hasMorePages())
+    <a href="{{ $model->nextPageUrl() }}">Next</a>
+@endif
 ```
 
 
