@@ -69,6 +69,10 @@
     * [Installing Meilisearch to project](/laravel/meilisearch.md#installing-meilisearch-to-project)
     * [Dealing with Meilisearch](/laravel/meilisearch.md#dealing-with-meilisearch)
 
+* [Laravel Telescope](/laravel/telescope.md)
+    * [Installation](/laravel/telescope.md#insatallation)
+    * [Dashboard Authorization](/laravel/telescope.md#dashboard-authorization)
+
 * [Artisan Commands](/laravel/artisan%20commands.md)
     * [Generate Application Key](/laravel/artisan%20commands.md#generate-application-key)
     * [Dealing with Routes in Artisan](/laravel/artisan%20commands.md#dealing-with-routes-in-artisan)

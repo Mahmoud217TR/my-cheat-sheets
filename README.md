@@ -14,6 +14,7 @@
     * [Deploying on Heroku](/laravel/deploying%20on%20heroku.md)
     * [Queuing Jobs](/laravel/queuing%20jobs.md)
     * [Meilisearch](/laravel/meilisearch.md)
+    * [Laravel Telescope](/laravel/telescope.md)
     * [Artisan Commands](/laravel/artisan%20commands.md)
     * [Cookies](/laravel/cookies.md)
     * [Redirecting - Requests & Responses](/laravel/redirecting%20-%20requests%20%26%20responses.md)
