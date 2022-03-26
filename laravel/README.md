@@ -26,6 +26,10 @@
     * [Making Pivot Tables](/laravel/database%20tricks.md#making-pivot-tables)
     * [Many To Many with data](/laravel/database%20tricks.md#many-to-many-with-data)
 
+* [Intervention-Image](/laravel/intervention-image.md)
+    * [Installation](/laravel/intervention-image.md#installation)
+    * [Usage](/laravel/intervention-image.md#usage)
+    
 * [Dealing with Policies](/laravel/dealing%20with%20policies.md)
     * [Creating a Policy](/laravel/dealing%20with%20policies.md#creating-a-policy)
     * [Dealing with Policy](/laravel/dealing%20with%20policies.md#dealing-with-policy)
