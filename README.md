@@ -11,6 +11,7 @@
     * [Events & Listeners](/laravel/events%20%26%20listners.md)
     * [Blade](/laravel/blade.md)
     * [Pagination](/laravel/pagination.md)
+    * [Mailables](/laravel/mailables.md)
     * [Deploying on Heroku](/laravel/deploying%20on%20heroku.md)
     * [Queuing Jobs](/laravel/queuing%20jobs.md)
     * [Meilisearch](/laravel/meilisearch.md)

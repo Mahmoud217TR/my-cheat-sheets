@@ -54,6 +54,10 @@
     * [Adding Navigators Manually](/laravel/pagination.md#adding-navigators-manually)
     * [Paginator Methods Table](/laravel/pagination.md#pagination)
 
+* [Mailables](/laravel/mailables.md)
+    * [Making Mail](/laravel/mailables.md#making-mail)
+    * [Sending Mails](/laravel/mailables.md#sending-mails)
+
 * [Deploying on Heroku](/laravel/deploying%20on%20heroku.md)
     * [Requirements](/laravel/deploying%20on%20heroku.md#requirements)
     * [Deploying](/laravel/deploying%20on%20heroku.md#deploying)
