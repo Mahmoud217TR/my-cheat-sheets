@@ -21,10 +21,12 @@
     * [Adding a fav icon](/laravel/tips%20%26%20tricks.md#adding-a-fav-icon)
     * [Activating Verification](/laravel/tips%20%26%20tricks.md#activating-verification)
 
-* [Database Tricks](/laravel/database%20tricks.md)
-    * [Adding Foreign ID to tables](/laravel/database%20tricks.md#adding-foreign-id-to-tables)
-    * [Making Pivot Tables](/laravel/database%20tricks.md#making-pivot-tables)
-    * [Many To Many with data](/laravel/database%20tricks.md#many-to-many-with-data)
+* [Eloquent](/laravel/eloquent.md)
+    * [One-to-One](/laravel/eloquent.md#one-to-one)
+    * [One-to-Many](/laravel/eloquent.md#one-to-many)
+    * [Many-to-Many](/laravel/eloquent.md#many-to-many)
+    * [Many-to-Many with data](/laravel/eloquent.md#many-to-many-with-data)
+    * [Adding Foreign ID to tables](/laravel/eloquent.md#adding-foreign-id-to-tables)
 
 * [Intervention-Image](/laravel/intervention-image.md)
     * [Installation](/laravel/intervention-image.md#installation)
