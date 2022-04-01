@@ -8,6 +8,7 @@
 * [Branches](#branches)
 * [Repos](#repos)
 * [Deleting](#deleting)
+* [Clean](#clean)
 
 ## Initialize
 
@@ -28,14 +29,14 @@
 Checking tracked or untracked files `git status`.
 
 
-# Commits 
+## Commits 
 
 - Making a new commit `git commit -m <message>`
 
 - Adding everything to staging area and commiting `git commit -am <message>`.
 
 
-# Branches
+## Branches
 
 - Switching to a branch `git checkout <branch>`.
 
@@ -50,7 +51,7 @@ Checking tracked or untracked files `git status`.
 	- Change the branch name `git branch -M <branch>`.
 		
 
-# Repos
+## Repos
 
 - Adding a remote repository `git remote add origin <url>`.
 		
@@ -62,9 +63,20 @@ Checking tracked or untracked files `git status`.
 		
 - Clone a project `git clone <url>`.
 
+- Resting Repo Head `git rest --hard <hash>`, then you would need `git push origin main --force`.
 
-# Deleting
+- To show logs `git log`.
+
+
+## Deleting
 
 - Removing a file form repo `git rm <file>`
 
 - Removing a folder form repo `git rm <folder> -r`
+
+
+## Clean 
+
+- To show files that will be removed `git clean -n`.
+
+- To remove unstaged files `git clean -f`.
