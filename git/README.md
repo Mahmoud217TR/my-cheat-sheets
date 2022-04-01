@@ -23,3 +23,8 @@
     * [Getting Files](/git/stash.md#getting-files)
     * [Showing stash contents](/git/stash.md#showing-stash-contents)
     * [Deleting a stsh](/git/stash.md#deleting-a-stash)
+
+* [Tags](/git/tags.md)
+    * [Show Tags](/git/tags.md#show-tags)
+    * [Create Tags](/git/tags.md#create-tags)
+    * [Delete Tags](/git/tags.md#delete-tags)

@@ -36,3 +36,4 @@
     * [Git in General](/git/git.md)
     * [Git Configs & Aliases](/git/config.md)
     * [Stashing](/git/stash.md)
+    * [Tags](/git/tags.md)
