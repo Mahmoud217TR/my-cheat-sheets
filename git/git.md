@@ -1,45 +1,70 @@
-# Git CheatSheet
+# Git in General
 
 **Table of Contents:**
-* [Dealing with Git](#dealing-with-git)
+* [Initialize](#initialize)
+* [Staging Area](#staging-area)
+* [Status](#status)
+* [Commits](#commits)
+* [Branches](#branches)
+* [Repos](#repos)
+* [Deleting](#deleting)
 
-## Dealing with Git
+## Initialize
+
 - Initilizing a repository `git init`.
+
+
+## Staging Area
+
+- Adding a files: to staging area: `git add <file>`.
+
+- Adding all files to staging area: `git add .`. 
 		
-- Add a file to staging area:
-	- Adding a specific file `git add <file name>`.
-	- Adding all Files `git add .`. 
-		
-- Remove a file from staging area `git rm --cached <file name>`.
-	
-- Checking tracked or untracked files `git status`.
-		
+- Removing a file from staging area `git rm --cached <file>` or `git restore <file>`
+
+
+## Status
+
+Checking tracked or untracked files `git status`.
+
+
+# Commits 
+
 - Making a new commit `git commit -m <message>`
 
 - Adding everything to staging area and commiting `git commit -am <message>`.
-		
-- Switching to a branch `git checkout <branch name>`.
 
-- Switching to a **new** branch `git checkout -b <branch name>`.
+
+# Branches
+
+- Switching to a branch `git checkout <branch>`.
+
+- Switching to a **new** branch `git checkout -b <branch>`.
 		
 - Get all branchs `git branch`.
 		
 - To merge another branch with the current branch `git merge extended`.
 		
 - Renaming a branch:
-	- Go to the brach you want to rename it `git checkout -b <branch name>`.
-	- Change the branch name `git branch -M <new branch name>`.
+	- Go to the brach you want to rename it `git checkout -b <branch>`.
+	- Change the branch name `git branch -M <branch>`.
 		
-- Adding a remote repository `git remote add origin <repo url>`.
+
+# Repos
+
+- Adding a remote repository `git remote add origin <url>`.
 		
 - Checking the remote repositories `git remote`.
 		
-- Pushing changes to remote repository `git push -u <remote repository> <branch name>`.
+- Pushing changes to remote repository `git push -u <repo> <branch>`.
 		
 - Pulling Changes `git pull`.
 		
-- Clone a project `git clone <repo url>`.
-	
-- Removing a file form repo `git rm <file path>`
+- Clone a project `git clone <url>`.
 
-- Removing a folder form repo `git rm <folder path> -r`
+
+# Deleting
+
+- Removing a file form repo `git rm <file>`
+
+- Removing a folder form repo `git rm <folder> -r`

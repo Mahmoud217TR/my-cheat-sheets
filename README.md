@@ -33,4 +33,4 @@
     * [Try & Except in Python](/python/python%20try%20and%20except.md)
 
 * [Git](/git/)
-    * [Git Cheat Sheet](/git/git.md)
+    * [Git in General](/git/git.md)
