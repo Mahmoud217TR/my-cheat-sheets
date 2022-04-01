@@ -1,4 +1,4 @@
-# Laravel Cheat Sheets
+# Git Cheat Sheets
 
 **Table of Contents:**
 * [Git in General](/git/git.md)
