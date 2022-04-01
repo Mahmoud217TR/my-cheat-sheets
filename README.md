@@ -34,3 +34,4 @@
 
 * [Git](/git/)
     * [Git in General](/git/git.md)
+    * [Git Configs & Aliases](/git/config.md)

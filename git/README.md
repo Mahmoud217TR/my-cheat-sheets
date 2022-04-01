@@ -9,3 +9,8 @@
     * [Branches](#branches)
     * [Repos](#repos)
     * [Deleting](#deleting)
+* [Git Configs & Aliases](/git/config.md)
+    * [Configs](#configs)
+    * [Get & Set](#get--set-config)
+    * [Configs in Editor](#configs)
+    * [Aliases](#aliases)
