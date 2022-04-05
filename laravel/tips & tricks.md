@@ -26,7 +26,7 @@ $table->unsignedBigInteger('state'); // assuming the states are (0, 1, 2, 3)
 // In User Model
 
 // To ease getting states 
-public static function getState(){
+public static function states(){
     return [
         0 => 'Active',
         1 => 'Inactive',
@@ -36,13 +36,17 @@ public static function getState(){
 }
 
 // The Accessor & Mutator
-public function getStateAttribute($attribute){
-    return self::getState()[$attribute];
+public function state(): Attribute{
+    return Attribute::make(
+        get: fn ($value) => $this->states()[$value],
+        set: fn ($value) => array_search($value,$this->states()),
+    );
 }
 
 // Any where in app
-User::getState()    // returns all User states as text (Active, Inactive, Suspended, Banned)
-$user->state;       // returns the current user state as text
+User::states();             // returns all User states as text (Active, Inactive, Suspended, Banned)
+$user->state = 'Inactive';  // Uesr's state becomes 1 in database (Inactive)
+$user->state;               // returns the current user state as text ('Inactive')
 ```
 
 
