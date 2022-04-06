@@ -25,13 +25,13 @@ $table->unsignedBigInteger('state'); // assuming the states are (0, 1, 2, 3)
 
 // In User Model
 
-// To ease getting states 
+// To ease getting states (((((ALWAYS START FROM 1)))))
 public static function states(){
     return [
-        0 => 'Active',
-        1 => 'Inactive',
-        2 => 'Suspended',
-        3 => 'Banned'
+        1 => 'Active',
+        2 => 'Inactive',
+        3 => 'Suspended',
+        4 => 'Banned'
     ];
 }
 
