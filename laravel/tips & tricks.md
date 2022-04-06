@@ -4,13 +4,14 @@
 * [Accessors & Mutators](#accessors--mutators)
 * [Flashing data into Session](#flashing-data-into-session)
 * [Get Back Route as URL](#get-back-route-as-url)
-* [Make a state in factory](#make-a-state-in-factory)
+* [Factory States and Sequneces](#factory-states-and-sequneces)
 * [Force HTTPS Scheme](#force-https-scheme)
 * [Dynamic Page Titles](#dynamic-page-titles)
 * [Sending Requests using GuzzleHttp](#sending-requests-using-guzzlehttp)
 * [Getting Values from environment file](#getting-values-from-environment-file)
 * [Adding a fav icon](#adding-a-fav-icon)
 * [Activating Verification](#activating-verification)
+* [Logging Functions](#logging-functions)
 
 
 ## Accessors & Mutators
@@ -99,12 +100,12 @@ back()->getTargetUrl()
 ```
 
 
-## Make a state in factory
+## Factory States and Sequneces
 
-To make a state in `Profile` Model factory for example write this:
+To make a state in `Post` Model factory for example write this:
 
 ```php
-// In Profile factory
+// In Post factory
 public function withoutUser(){
     return $this->state(function (array $attributes) {
         return [
@@ -114,9 +115,20 @@ public function withoutUser(){
 }
 
 // To use it
-Profile::factory()->withoutUser()->make();
+Post::factory()->withoutUser()->make();
 ```
 
+To make a Sequneces as `Post` model belongs to an existing `User` model:
+
+```php
+// In Post factory
+public function forExistingUser(){
+    return $this->state(new Sequence(fn ($sequence) =>['user_id' => User::all()->random()]));
+}
+
+// To use it
+Post::factory()->forExistingUser()->make()
+```
 
 ## Force HTTPS Scheme
 
@@ -243,3 +255,14 @@ To activate `User` Model Verification:
 3. Setup the mail services.
 
 4. Add the Middleware `verified`.
+
+
+## Logging Functions
+
+To log for example in database seeder:
+
+```php
+$this->command->info('Info');
+$this->command->warn('Warning');
+$this->command->error('Error');
+```
