@@ -12,6 +12,7 @@
 * [Adding a fav icon](#adding-a-fav-icon)
 * [Activating Verification](#activating-verification)
 * [Logging Functions](#logging-functions)
+* [Ordering by Relationships](#ordering-by-relationships)
 
 
 ## Accessors & Mutators
@@ -265,4 +266,13 @@ To log for example in database seeder:
 $this->command->info('Info');
 $this->command->warn('Warning');
 $this->command->error('Error');
+```
+
+
+## Ordering by Relationships
+
+To Order a `Post` models by their comments count for example:
+
+```php
+$posts = Post::withCount('comments')->orderBy('comments_count', 'desc')->get();
 ```

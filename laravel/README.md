@@ -21,6 +21,7 @@
     * [Adding a fav icon](/laravel/tips%20%26%20tricks.md#adding-a-fav-icon)
     * [Activating Verification](/laravel/tips%20%26%20tricks.md#activating-verification)
     * [Logging Functions](/laravel/tips%20%26%20tricks.md#logging-functions)
+    * [Ordering by Relationships](#ordering-by-relationships)
 
 * [Eloquent](/laravel/eloquent.md)
     * [One-to-One](/laravel/eloquent.md#one-to-one)
