@@ -13,6 +13,8 @@
 * [Activating Verification](#activating-verification)
 * [Logging Functions](#logging-functions)
 * [Ordering by Relationships](#ordering-by-relationships)
+* [Grouping by Days](#grouping-by-day)
+* [Replicating Models](#replicating-models-in-database)
 
 
 ## Accessors & Mutators
@@ -275,4 +277,37 @@ To Order a `Post` models by their comments count for example:
 
 ```php
 $posts = Post::withCount('comments')->orderBy('comments_count', 'desc')->get();
+```
+
+
+## Grouping by Day
+
+To get `Log` model grouped by **Day** using `created_date` attribute for example:
+
+```php
+Log::all()->groupBy(function($log){
+    return $log->created_at->format('d-m-y');;
+})
+```
+
+If you want it to be sorted by latest also:
+
+```php
+Log::orderBy('created_at','DESC')->get()->groupBy(function($log){
+    return $log->created_at->format('d-m-y');;
+})
+
+// Better Code
+Log::latest()->get()->groupBy(function($log){
+    return $log->created_at->format('d-m-y');;
+})
+```
+
+
+## Replicating Models in Database
+
+If you want to replicate a model in the database with **new id & timestamps**, for example we want to replicate a `Post` model which has the id of 1:
+
+```php
+Post::find(1)->replicate()->save()
 ```

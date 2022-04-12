@@ -21,7 +21,9 @@
     * [Adding a fav icon](/laravel/tips%20%26%20tricks.md#adding-a-fav-icon)
     * [Activating Verification](/laravel/tips%20%26%20tricks.md#activating-verification)
     * [Logging Functions](/laravel/tips%20%26%20tricks.md#logging-functions)
-    * [Ordering by Relationships](#ordering-by-relationships)
+    * [Ordering by Relationships](/laravel/tips%20%26%20tricks.md#logging-functions#ordering-by-relationships)
+    * [Grouping by Days](/laravel/tips%20%26%20tricks.md#logging-functions#grouping-by-day)
+    * [Replicating Models](/laravel/tips%20%26%20tricks.md#logging-functions#replicating-models-in-database)
 
 * [Eloquent](/laravel/eloquent.md)
     * [One-to-One](/laravel/eloquent.md#one-to-one)
