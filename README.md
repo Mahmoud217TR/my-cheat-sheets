@@ -38,3 +38,6 @@
     * [Git Configs & Aliases](/git/config.md)
     * [Stashing](/git/stash.md)
     * [Tags](/git/tags.md)
+
+* [Laravel-Vue](/laravel-vue/)
+    * [CKEditor](/laravel-vue/ckeditor.md)
