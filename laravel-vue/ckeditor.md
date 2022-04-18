@@ -15,6 +15,8 @@ To install CKEditor on laravel-vue project follow these steps:
 
 ```javaScript
 import CKEditor from '@ckeditor/ckeditor5-vue';
+
+let app=createApp({}).use(CKEditor)
 ```
 
 * Make an Editor component:
