@@ -4,6 +4,7 @@
 * [Creating a Policy](#creating-a-policy)
 * [Dealing with Policy](#dealing-with-policy)
 * [Guest Approach (Null User) in Policies](#guest-approach-null-user-in-policies)
+* [Combining Multiple cans](#combining-multiple-cans)
 
 
 ## Creating a Policy
@@ -43,4 +44,15 @@ for example:
 public function view(?User $user, Profile $profile){
     // do some stuff
 }
+```
+
+
+## Combining Multiple cans
+
+I you have multiple can statements such as any one who can update **or** delete a `Post` for example use `canany`:
+
+```blade
+    @canany(['update','delete'],$post)
+        {{-- what do you wanna do here --}}
+    @endcan
 ```

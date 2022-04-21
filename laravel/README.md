@@ -40,6 +40,7 @@
     * [Creating a Policy](/laravel/dealing%20with%20policies.md#creating-a-policy)
     * [Dealing with Policy](/laravel/dealing%20with%20policies.md#dealing-with-policy)
     * [Guest Approach (Null User) in Policies](/laravel/dealing%20with%20policies.md#guest-approach-null-user-in-policies)
+    * [Combining Multiple cans](/laravel/dealing%20with%20policies.md#combining-multiple-cans)
 
 * [Events & Listeners](/laravel/events%20%26%20listners.md)
     * [Events](/laravel/events%20%26%20listners.md#events)
