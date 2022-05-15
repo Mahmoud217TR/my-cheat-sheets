@@ -41,3 +41,4 @@
 
 * [Laravel-Vue](/laravel-vue/)
     * [CKEditor](/laravel-vue/ckeditor.md)
+    * [Dropzone](/laravel-vue/dropzone.md)
