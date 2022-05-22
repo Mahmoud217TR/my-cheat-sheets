@@ -19,7 +19,7 @@ php artisan make:mail ContactFormMail --markdown=emails.contactform
 Initilize passing data in the class constructor:
 
 ```php
-public data; // Public to be visible at the view
+public $data; // Public to be visible at the view
 
 public function __construct($data){
     $this->data = $data;
