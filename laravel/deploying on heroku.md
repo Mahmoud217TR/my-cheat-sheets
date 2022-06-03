@@ -58,4 +58,4 @@
 
 ## Notes
 
-- If you don't have SSL yrt and want to force HTTPS protocol [check this](/laravel/tips%20%26%20tricks.md#force-https-scheme).
+- If you don't have SSL yet and want to force HTTPS protocol [check this](/laravel/tips%20%26%20tricks.md#force-https-scheme).
