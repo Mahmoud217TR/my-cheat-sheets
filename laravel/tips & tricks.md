@@ -2,6 +2,7 @@
 
 **Table of Contents:**
 * [Accessors & Mutators](#accessors--mutators)
+* [Model Scopes](#model-scopes)
 * [Flashing data into Session](#flashing-data-into-session)
 * [Get Back Route as URL](#get-back-route-as-url)
 * [Factory States and Sequneces](#factory-states-and-sequneces)
@@ -51,6 +52,25 @@ public function state(): Attribute{
 User::states();             // returns all User states as text (Active, Inactive, Suspended, Banned)
 $user->state = 'Inactive';  // Uesr's state becomes 1 in database (Inactive)
 $user->state;               // returns the current user state as text ('Inactive')
+```
+
+## Model Scopes
+
+If you have a `Post` model for example and it has 2 states (Draft => 1, Published => 2) you can declare scopes:
+
+```php
+// In the Post Model
+public function scopeDraft($query){
+    return $query->where('state','1');
+}
+
+public function scopePublished($query){
+    return $query->where('state','2');
+}
+
+// In the App
+Post::Published()->get(); // get published posts
+Post::Draft()->get(); // get draft posts
 ```
 
 
