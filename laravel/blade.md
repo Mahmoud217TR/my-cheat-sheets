@@ -4,6 +4,7 @@
 * [Blade Templates](#blade-templates)
 * [Including Views](#including-views)
 * [Echoing](#echoing)
+* [Choice for Models](#choice-for-models)
 
 
 ## Blade Templates
@@ -53,4 +54,17 @@ To echo in views:
 {{{ $name or 'Default' }}} <!-- Echoing Data After Checking For Existence  -->
 
 @{{ This will not be processed by Blade }} <!-- Displaying Raw Text With Curly Braces -->
+```
+
+
+## Choice for Models
+
+Assume we have a view that shows the number of posts like if it was 1 post we should write `Post`, otherwise write `Posts`:
+
+```blade
+<!-- Normally -->
+{{ $posts->count() }} @choice('Post|Posts',$posts->count())
+
+<!-- With Pagination -->
+{{ $posts->total() }} @choice('Post|Posts',$posts->total())
 ```

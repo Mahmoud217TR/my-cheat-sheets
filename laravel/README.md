@@ -53,6 +53,7 @@
     * [Blade Templates](/laravel/blade.md#blade-templates)
     * [Including Views](/laravel/blade.md#including-views)
     * [Echoing](/laravel/blade.md#echoing)
+    * [Choice for Models](/laravel/blade.md#choice-for-models)
 
 * [Pagination](/laravel/pagination.md)
     * [Auto-Magic Pagination](/laravel/pagination.md#auto-magic-pagination)
