@@ -23,7 +23,7 @@
 	MEILISEARCH_KEY=
 	```
 
-5. Add Searchable Trait to Your Model
+5. Add Searchable Trait to Your Model `use Laravel\Scout\Searchable;`.
 	
 6. Import Data to MeiliSearch `php artisan scout:import "App\Models\Post"`
 
