@@ -12,6 +12,7 @@
 * [Tips & Tricks](/laravel/tips%20%26%20tricks.md)
     * [Accessors & Mutators](/laravel/tips%20%26%20tricks.md#accessors--mutators)
     * [Model Scopes](/laravel/tips%20%26%20tricks.md#model-scopes)
+    * [Auto Create Profile when Creating a User](/laravel/tips%20%26%20tricks.md#auto-create-profile-when-creating-a-user)
     * [Flashing data into Session](/laravel/tips%20%26%20tricks.md#flashing-data-into-session)
     * [Get Back Route as URL](/laravel/tips%20%26%20tricks.md#get-back-route-as-url)
     * [Factory States and Sequneces](/laravel/tips%20%26%20tricks.md#factory-states-and-sequneces)

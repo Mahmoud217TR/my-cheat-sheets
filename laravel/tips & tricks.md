@@ -3,6 +3,7 @@
 **Table of Contents:**
 * [Accessors & Mutators](#accessors--mutators)
 * [Model Scopes](#model-scopes)
+* [Auto Create Profile when Creating a User](#auto-create-profile-when-creating-a-user)
 * [Flashing data into Session](#flashing-data-into-session)
 * [Get Back Route as URL](#get-back-route-as-url)
 * [Factory States and Sequneces](#factory-states-and-sequneces)
@@ -54,6 +55,7 @@ $user->state = 'Inactive';  // Uesr's state becomes 1 in database (Inactive)
 $user->state;               // returns the current user state as text ('Inactive')
 ```
 
+
 ## Model Scopes
 
 If you have a `Post` model for example and it has 2 states (Draft => 1, Published => 2) you can declare scopes:
@@ -71,6 +73,20 @@ public function scopePublished($query){
 // In the App
 Post::Published()->get(); // get published posts
 Post::Draft()->get(); // get draft posts
+```
+
+
+## Auto Create Profile when Creating a User
+
+Assume we have a `Profile` model that is created when ever a `User` is registered, use the `booted` method:
+
+```php
+protected static function booted()
+{
+    static::created(function ($user) {
+        $user->profile()->save(new Profile);
+    });
+}
 ```
 
 
