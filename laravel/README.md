@@ -8,6 +8,7 @@
 * [Starting a new Project](/laravel/starting%20a%20new%20project.md)
     * [Create Laravel Project](/laravel/starting%20a%20new%20project.md#create-laravel-project)
     * [Preset Front-End (Vue & Bootstrap)](/laravel/starting%20a%20new%20project.md#preset-front-end-vue--bootstrap)
+    * [Preset Front-End (Vue & Bootstrap)(Old)](#preset-front-end-vue--bootstrap-old)
 
 * [Tips & Tricks](/laravel/tips%20%26%20tricks.md)
     * [Accessors & Mutators](/laravel/tips%20%26%20tricks.md#accessors--mutators)

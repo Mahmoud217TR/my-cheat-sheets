@@ -3,11 +3,22 @@
 **Table of Contents:**
 * [Create Laravel Project](#create-laravel-project)
 * [Preset Front-End (Vue & Bootstrap)](#preset-front-end-vue--bootstrap)
+* [Preset Front-End (Vue & Bootstrap)(Old)](#preset-front-end-vue--bootstrap-old)
 
 ## Create Laravel Project
 - Open CMD and write `laravel new project-name`
 
+
 ## Preset Front-End (Vue & Bootstrap)
+- In terminal write `composer require laravel/ui`
+- Install vue with authentication `php artisan ui vue --auth`
+- Install Packages `npm install`
+- Install Other Packages `npm install vue-loader vue-template-compiler axios-vue @popperjs/core --save-dev`
+	* If any vulnerabilities were found use `npm audit fix`
+- Run development command `npm run dev`
+
+
+## Preset Front-End (Vue & Bootstrap) (Old)
 - In terminal write `composer require laravel/ui`
 - Install vue setup `php artisan ui vue`
 	* If you need authentication `php artisan ui vue --auth`
