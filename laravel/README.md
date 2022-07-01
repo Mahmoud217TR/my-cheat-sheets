@@ -88,6 +88,12 @@
     * [Installation](/laravel/telescope.md#insatallation)
     * [Dashboard Authorization](/laravel/telescope.md#dashboard-authorization)
 
+* [Laravel Excel](/laravel/excel.md)
+    * [Installation & Setup](/laravel/excel.md#installation--setup)
+    * [Export](/laravel/excel.md#export)
+    * [Import](/laravel/excel.md#import)
+    * [Exporting with Headings](/laravel/excel.md#exporting-with-headings)
+    
 * [Artisan Commands](/laravel/artisan%20commands.md)
     * [Generate Application Key](/laravel/artisan%20commands.md#generate-application-key)
     * [Dealing with Routes in Artisan](/laravel/artisan%20commands.md#dealing-with-routes-in-artisan)
