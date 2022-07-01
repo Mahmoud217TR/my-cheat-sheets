@@ -34,10 +34,6 @@
     * [Many-to-Many](/laravel/eloquent.md#many-to-many)
     * [Many-to-Many with data](/laravel/eloquent.md#many-to-many-with-data)
     * [Adding Foreign ID to tables](/laravel/eloquent.md#adding-foreign-id-to-tables)
-
-* [Intervention-Image](/laravel/intervention-image.md)
-    * [Installation](/laravel/intervention-image.md#installation)
-    * [Usage](/laravel/intervention-image.md#usage)
     
 * [Dealing with Policies](/laravel/dealing%20with%20policies.md)
     * [Creating a Policy](/laravel/dealing%20with%20policies.md#creating-a-policy)
@@ -80,20 +76,6 @@
     * [Processing Jobs](/laravel/queuing%20jobs.md#processing-jobs)
     * [Dealing with workers in command line](/laravel/queuing%20jobs.md#dealing-with-workers-in-command-line)
 
-* [Meilisearch](/laravel/meilisearch.md)
-    * [Installing Meilisearch to project](/laravel/meilisearch.md#installing-meilisearch-to-project)
-    * [Dealing with Meilisearch](/laravel/meilisearch.md#dealing-with-meilisearch)
-
-* [Laravel Telescope](/laravel/telescope.md)
-    * [Installation](/laravel/telescope.md#insatallation)
-    * [Dashboard Authorization](/laravel/telescope.md#dashboard-authorization)
-
-* [Laravel Excel](/laravel/excel.md)
-    * [Installation & Setup](/laravel/excel.md#installation--setup)
-    * [Export](/laravel/excel.md#export)
-    * [Import](/laravel/excel.md#import)
-    * [Exporting with Headings](/laravel/excel.md#exporting-with-headings)
-    
 * [Artisan Commands](/laravel/artisan%20commands.md)
     * [Generate Application Key](/laravel/artisan%20commands.md#generate-application-key)
     * [Dealing with Routes in Artisan](/laravel/artisan%20commands.md#dealing-with-routes-in-artisan)

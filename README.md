@@ -1,6 +1,7 @@
 # My Cheat Sheets
 
 **Table of Contents:**
+
 * [Laravel](/laravel/)
     * [Installation](/laravel/installation.md)
     * [Starting a new Project](/laravel/starting%20a%20new%20project.md)
@@ -21,6 +22,12 @@
     * [Redirecting - Requests & Responses](/laravel/redirecting%20-%20requests%20%26%20responses.md)
     * [Hashing & Encryption](/laravel/hashing%20%26%20encryption.md)
     * [Authentication](/laravel/authentication.md)
+
+* [Laravel Packages](/laravel-packages/)
+    * [Intervention-Image](/laravel-packages/intervention-image.md)
+    * [Meilisearch](/laravel-packages/meilisearch.md)
+    * [Laravel Telescope](/laravel-packages/telescope.md)
+    * [Laravel Excel](/laravel-packages/excel.md)
 
 * [CSS](/css/)
     * [CSS Tips & Tricks](/css/tips%20%26%20tricks.md)
