@@ -5,6 +5,7 @@
 * [Export](#export)
 * [Import](#import)
 * [Exporting with Headings](#exporting-with-headings)
+* [Styling](#styling)
 
 
 ## Installation & Setup
@@ -95,3 +96,55 @@ class UsersExport implements FromCollection, WithHeadings
 
 }
 ```
+
+
+## Styling
+
+* To Style the Headings in the previous example:
+
+1. First install PhpSpreadsheet package `composer require phpoffice/phpspreadsheet`.
+2. Make the class Implements the `WithStyles` interface.
+3. Override the `styles` method *passing an object of `Worksheet`*.
+
+```php
+namespace App\Exports;
+
+use App\Models\User;
+use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\WithStyles;
+use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+
+class UsersExport implements FromCollection, WithHeadings, WithStyles
+{
+    /**
+    * @return \Illuminate\Support\Collection
+    */
+    public function collection()
+    {
+        return User::select('id', 'name', 'email');
+    }
+
+    public function headings(): array
+    {
+        return [
+            'ID',
+            'Name',
+            'Email',
+        ];
+    }
+
+    public function styles(Worksheet $sheet)
+    {
+        return [
+            // Styles the first row as bold text.
+            1    => ['font' => ['bold' => true]],
+            // Styles the first column as bold text.
+            A    => ['font' => ['bold' => true]],
+        ];
+    }
+
+}
+```
+
+> Check [PhpSpreadSheet Docs](https://phpspreadsheet.readthedocs.io/en/latest/).

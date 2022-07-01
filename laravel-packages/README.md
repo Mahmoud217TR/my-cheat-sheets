@@ -19,3 +19,4 @@
     * [Export](/laravel-packages/excel.md#export)
     * [Import](/laravel-packages/excel.md#import)
     * [Exporting with Headings](/laravel-packages/excel.md#exporting-with-headings)
+    * [Styling](/laravel-packages/excel.md#styling)
