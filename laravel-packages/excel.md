@@ -10,13 +10,26 @@
 
 ## Installation & Setup
 
-* To Install the Library use: `composer require maatwebsite/excel`
+* To Install the Library use: `composer require maatwebsite/excel -W`
 
 * Next Export the config file: 
 
 ```
 php artisan vendor:publish --provider="Maatwebsite\Excel\ExcelServiceProvider" --tag=config
 ```
+
+* If not detected you have to register it manually:
+    * open `config/app.php` and add this to providers:
+
+    ```php
+    Maatwebsite\Excel\ExcelServiceProvider::class,
+    ```
+    
+    * and in `aliases` section:
+    
+    ```php
+    'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+    ```
 
 > Check the Docs of [Laravel Excel](https://laravel-excel.com).
 
