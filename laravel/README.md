@@ -10,6 +10,9 @@
     * [Preset Front-End (Vue & Bootstrap)](/laravel/starting%20a%20new%20project.md#preset-front-end-vue--bootstrap)
     * [Preset Front-End (Vue & Bootstrap)(Old)](/laravel/starting%20a%20new%20project.md#preset-front-end-vue--bootstrap-old)
 
+* [Laravel & Vue with vite](/laravel/starting%20new%20project%20with%20vite.md)
+    * [Laravel & Vue with vite](/laravel/starting%20new%20project%20with%20vite.md#laravel--vue-with-vite)
+
 * [Tips & Tricks](/laravel/tips%20%26%20tricks.md)
     * [Accessors & Mutators](/laravel/tips%20%26%20tricks.md#accessors--mutators)
     * [Model Scopes](/laravel/tips%20%26%20tricks.md#model-scopes)
