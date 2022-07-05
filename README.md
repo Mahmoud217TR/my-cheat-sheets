@@ -5,6 +5,7 @@
 * [Laravel](/laravel/)
     * [Installation](/laravel/installation.md)
     * [Starting a new Project](/laravel/starting%20a%20new%20project.md)
+    * [Laravel & Vue with vite](/laravel/starting%20new%20project%20with%20vite.md)
     * [Tips & Tricks](/laravel/tips%20%26%20tricks.md)
     * [Eloquent](/laravel/eloquent.md)
     * [Intervention-Image](/laravel/intervention-image.md)
