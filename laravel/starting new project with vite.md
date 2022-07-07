@@ -50,6 +50,7 @@ export default defineConfig({
 import _ from 'lodash';
 window._ = _;
 
+import 'bootstrap';
 
 import axois from 'axios';
 window.axios = axois;
