@@ -14,7 +14,29 @@ To Truncate a text after 3 lines:
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
     overflow: hidden;
+}
+```
+
+Another Way:
+
+```css
+.line-truncate{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-of-2{
+    -webkit-line-clamp: 2;
+}
+
+.line-of-3{
+    -webkit-line-clamp: 3;
 }
 ```
 
