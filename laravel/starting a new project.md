@@ -9,6 +9,58 @@
 - Open CMD and write `laravel new project-name`
 
 
+## Preset Front-End (Vue & Bootstrap & Tailwind)
+- In terminal write `composer require laravel/ui`
+- Install vue with authentication `php artisan ui vue --auth`
+- Install Tailwindcss `npm install -D tailwindcss postcss autoprefixer laravel-mix-tailwind`
+- Init Taiwlwind `npx tailwindcss init`
+- Install Vue Packages `npm install vue-loader vue-template-compiler axios-vue @popperjs/core --save-dev`
+- Update vue version `npm install --save vue@next`
+- Updating Vue loader version `npm install --save-dev vue-loader@next`
+- Update Laravel Mix `npm install laravel-mix@latest --save-dev`
+- Install All Packages `npm install`
+	* If any vulnerabilities were found use `npm audit fix`
+- Config Files:
+	* webpack.mix.js :
+	```javascript
+
+	const mix = require('laravel-mix');
+	require("laravel-mix-tailwind");
+
+	/*
+	 |--------------------------------------------------------------------------
+	 | Mix Asset Management
+	 |--------------------------------------------------------------------------
+	 |
+	 | Mix provides a clean, fluent API for defining some Webpack build steps
+	 | for your Laravel application. By default, we are compiling the Sass
+	 | file for the application as well as bundling up all the JS files.
+	 |
+	 */
+
+	mix.js('resources/js/app.js', 'public/js')
+	    .vue()
+	    .tailwind("./tailwind.config.js")
+	    .sass('resources/sass/app.scss', 'public/css');
+
+	```
+	
+	* app.js
+	```javascript
+
+	require('./bootstrap');
+	window.Vue = require('vue').default;
+	import { createApp } from 'vue';
+
+	let app=createApp({})
+	app.component('example-component', require('./components/ExampleComponent.vue').default);
+	app.mount("#app");
+
+	```
+	
+- Run development command `npm run dev`
+
+
 ## Preset Front-End (Vue & Bootstrap)
 - In terminal write `composer require laravel/ui`
 - Install vue with authentication `php artisan ui vue --auth`
