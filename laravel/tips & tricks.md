@@ -5,6 +5,7 @@
 * [Model Scopes](#model-scopes)
 * [Auto Create Profile when Creating a User](#auto-create-profile-when-creating-a-user)
 * [Flashing data into Session](#flashing-data-into-session)
+* [Making your own helper functions](#making-your-own-helper-functions)
 * [Get Back Route as URL](#get-back-route-as-url)
 * [Factory States and Sequneces](#factory-states-and-sequneces)
 * [Force HTTPS Scheme](#force-https-scheme)
@@ -102,7 +103,7 @@ session()->has('key')
 session()->get('key')
 ```
 
-## Makin your own helper functions
+## Making your own helper functions
 
 1. Create `helpers.php` file inside app folder.
 
@@ -115,7 +116,6 @@ session()->get('key')
 			// your code
 		} 
 	} 
-    ?>
     ```
 
 3. In `composer.json` file put this in autoload block:
