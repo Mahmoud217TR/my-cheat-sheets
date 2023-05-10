@@ -1,8 +1,8 @@
 # Advanced PHP Techniques
 
 **Table of Contents:**
-* [Creating your own Sort Function](/php/advanced%20php%20techniques.md#creating-your-own-sort-function)
-* [Printing with PHP](/php/advanced%20php%20techniques.md#printing-with-php)
+* [Creating your own Sort Function](#creating-your-own-sort-function)
+* [Printing with PHP](#printing-with-php)
 
 
 

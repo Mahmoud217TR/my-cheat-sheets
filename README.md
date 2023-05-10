@@ -30,7 +30,7 @@
     * [Laravel Telescope](/laravel-packages/telescope.md)
     * [Laravel Excel](/laravel-packages/excel.md)
 
-* [PHP] (/php/)
+* [PHP](/php/)
     * [Advanced PHP Techniques](/php/advanced%20php%20techniques.md)
 
 * [CSS](/css/)
