@@ -111,21 +111,21 @@ usort($array, function ($first, $second) {
 
 - Formatting Table:
 
-| Format Character | Description                                                                                         |
-|------------------|-----------------------------------------------------------------------------------------------------|
-| `%s`             | String (outputs the argument as a string)                                                           |
-| `%d`             | Signed decimal number                                                                               |
-| `%f`             | Floating-point number                                                                               |
-| `%c`             | Character                                                                                           |
-| `%b`             | Binary representation (outputs the argument as a binary number)                                     |
-| `%o`             | Octal representation (outputs the argument as an octal number)                                      |
-| `%x` or `%X`     | Hexadecimal representation (outputs the argument as a hexadecimal number, lowercase or uppercase)   |
-| `%e` or `%E`     | Scientific notation (outputs the argument in scientific notation, lowercase or uppercase)           |
-| `%u`             | Unsigned decimal number (outputs the argument as an unsigned integer)                               |
-| `%g` or `%G`     | General format (outputs the argument as a floating-point number, using the shorter of `%e` or `%f`) |
-| `%%`             | Literal `%` character (outputs a percent sign)    |
+    | Format Character | Description                                                                                         |
+    |------------------|-----------------------------------------------------------------------------------------------------|
+    | `%s`             | String (outputs the argument as a string)                                                           |
+    | `%d`             | Signed decimal number                                                                               |
+    | `%f`             | Floating-point number                                                                               |
+    | `%c`             | Character                                                                                           |
+    | `%b`             | Binary representation (outputs the argument as a binary number)                                     |
+    | `%o`             | Octal representation (outputs the argument as an octal number)                                      |
+    | `%x` or `%X`     | Hexadecimal representation (outputs the argument as a hexadecimal number, lowercase or uppercase)   |
+    | `%e` or `%E`     | Scientific notation (outputs the argument in scientific notation, lowercase or uppercase)           |
+    | `%u`             | Unsigned decimal number (outputs the argument as an unsigned integer)                               |
+    | `%g` or `%G`     | General format (outputs the argument as a floating-point number, using the shorter of `%e` or `%f`) |
+    | `%%`             | Literal `%` character (outputs a percent sign)    |
 
-    - example
+- Examples:
 
     ```php
     // %s: String
